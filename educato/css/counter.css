@@ -1,0 +1,243 @@
+
+/* Sayaç Stilleri */
+.maskot-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.maskot-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.maskot-container .icon {
+    position: absolute;
+    top: 105px;
+    right: 1px;
+    font-size: 65px;
+    border-radius: 50%;
+}
+
+#yks-button {
+    background-color: #fe8366;
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+}
+ 
+#lgs-button {
+    background-color: #0c1c2d;
+    position: fixed;
+    top: 57%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    gap: 15px;
+    text-align: center;
+}
+
+#counter-buttons button {
+    padding: 15px 25px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+#yks-button:hover {
+    color: #e2735b;
+    background-color: #fff;
+    border: 1px solid #e2735b;
+}
+
+#lgs-button:hover {
+    color: #0c1c2d;
+    background-color: #fff;
+    border: 1px solid #0c1c2d;
+}
+
+.counter {
+    position: fixed;
+    top: 50%;
+    left: 82%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: linear-gradient(135deg, #0c1c2d, #f8f9fa);
+    padding: 25px 30px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.counter.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.counter h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.counter div {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a11cb;
+    margin-top: 10px;
+    z-index: 9999;
+}
+
+
+/* Animasyon - İkon Hafif Zıplama */
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .maskot-container .icon {
+        font-size: 50px;
+        top: 85px;
+    }
+
+    #yks-button,
+    #lgs-button {
+        right: 10px;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .counter {
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        padding: 20px;
+    }
+
+    .counter h3 {
+        font-size: 20px;
+    }
+
+    .counter div {
+        font-size: 18px;
+    }
+
+    
+
+    #counter-buttons button {
+        width: 120px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .maskot-image {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .maskot-container .icon {
+        font-size: 40px;
+        top: 75px;
+    }
+
+    #yks-button,
+    #lgs-button {
+        right: 5px;
+        gap: 8px;
+    }
+
+    .counter {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .counter h3 {
+        font-size: 18px;
+    }
+
+    .counter div {
+        font-size: 16px;
+    }
+
+    
+    #counter-buttons button {
+        width: 100px;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .maskot-image {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .maskot-container .icon {
+        font-size: 45px;
+        top: 75px;
+    }
+
+    #yks-button,
+    #lgs-button {
+        right: 2px;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .counter {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .counter h3 {
+        font-size: 16px;
+    }
+
+    .counter div {
+        font-size: 14px;
+    }
+
+    .counter .icon {
+        font-size: 25px;
+    }
+
+    #counter-buttons button {
+        width: 90px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .maskot-image {
+        max-width: 150px;
+    }
+}

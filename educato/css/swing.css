@@ -1,0 +1,254 @@
+/* Section Arka Planı ve Konumlandırma */
+.swing-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: url('../img/mavi-arka-plan.png') no-repeat center center;
+  background-size: cover;
+}
+
+.swing-container {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  animation: swingAnimation 2s infinite ease-in-out;
+}
+
+.swing {
+  width: 500px;
+  height: auto;
+  transform-origin: top center;
+  animation: swingAnimation 2s infinite ease-in-out;
+}
+
+.mascot-container-salincak {
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-50%);
+  animation: swingAnimation 2s infinite ease-in-out;
+}
+
+.mascot-salincak {
+  width: 600px;
+  transform: translateX(-5%);
+  height: auto;
+}
+
+
+/* Dinamik Title and Description */
+
+
+.card-dynamic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.card-dynamic-container .content {
+  margin-top: 100px;
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(243, 146, 0, 0.7);
+  border: 2 px solid #fff;
+  color: #FFF;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 1s ease, transform 0.5s ease;
+}
+
+#dynamic-title-1 {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #FFF;
+}
+
+#dynamic-description-1 {
+  font-size: 1.2em;
+  margin: 0; 
+  color: #FFF;
+}
+
+
+
+@keyframes swingAnimation {
+
+  0%,
+  100% {
+    transform: rotate(-0.5deg);
+  }
+
+  50% {
+    transform: rotate(0.5deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .swing-section {
+    width: 100%;
+    height: 500px;
+  }
+
+  .swing {
+    margin-top: 35px;
+    width: 450px;
+  }
+
+  .mascot-salincak {
+    width: 600px;
+    height: auto;
+    transform: translateX(-10%);
+
+  }
+
+  .card-dynamic-container {
+    width: 80%;
+  }
+
+  .card-dynamic-container .content {
+    width: 500px;
+    height: 250px;
+    margin-top: 80px;
+    padding: 15px;
+  }
+
+  #dynamic-title-1 {
+    font-size: 1.4em;
+  }
+
+  #dynamic-description-1 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 992px) {
+  .swing-section {
+    width: 100%;
+    height: 450px;
+  }
+
+  .swing {
+    margin-top: 35px;
+    width: 350px;
+  }
+
+  .mascot-salincak {
+    width: 450px;
+    height: auto;
+    transform: translateX(-8%);
+
+  }
+
+  .card-dynamic-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card-dynamic-container .content {
+    width: 450px;
+    height: 220px;
+    margin-top: 60px;
+    padding: 10px;
+  }
+
+  #dynamic-title-1 {
+    font-size: 1.3em;
+  }
+
+  #dynamic-description-1 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .swing-section {
+    width: 100%;
+    height: 850px;
+  }
+
+  .swing-container {
+    transform: translate(-50%, -50%);
+  }
+
+  .swing {
+    margin-top: 85px;
+    width: 450px;
+  }
+
+  .mascot-salincak {
+    width: 550px;
+    transform: translate(-5%, 20%);
+  }
+
+  .card-dynamic-container {
+    width: 95%;
+    height: auto;
+  }
+
+  .card-dynamic-container .content {
+    width: 600px;
+    height: auto;
+    margin-top: 40px;
+    padding: 10px;
+  }
+
+  #dynamic-title-1 {
+    font-size: 1em;
+  }
+
+  #dynamic-description-1 {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .swing-section {
+    width: 100%;
+    height: 900px;
+  }
+
+  .swing-container {
+    transform: translate(-50%, -50%);
+  }
+
+  .swing {
+    margin-top: 80px;
+    width: 450px;
+  }
+
+  .mascot-salincak {
+    width: 550px;
+    transform: translate(-5%, 20%);
+  }
+
+  .card-dynamic-container {
+    width: 95%;
+    height: auto;
+  }
+
+  .card-dynamic-container .content {
+    width: 500px;
+    height: auto;
+    margin-top: 40px;
+    padding: 10px;
+  }
+
+  #dynamic-title-1 {
+    font-size: 1em;
+  }
+
+  #dynamic-description-1 {
+    font-size: 0.9em;
+  }
+}

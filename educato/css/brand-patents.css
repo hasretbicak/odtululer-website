@@ -1,0 +1,64 @@
+/* Marka Tescil */
+.brand-patents {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.brand-patents h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.patent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+.patent-item img {
+    width: 100%;
+    cursor: pointer;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patent-item img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .patent-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .patent-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .brand-patents h2 {
+        font-size: 2em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-patents h2 {
+        font-size: 1.5em; 
+    }
+
+    .patent-item img {
+        box-shadow: none; 
+    }
+}

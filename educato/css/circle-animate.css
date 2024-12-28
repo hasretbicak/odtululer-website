@@ -1,0 +1,80 @@
+
+/* Arka plan simitlerini yerleştirme */
+.background-simits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Görsellerin içerik üzerinde olmaması için arka planda olacak */
+}
+
+/* Simit şekillerinin ortak stilini belirleyelim */
+.simit {
+    position: absolute;
+    width: 100px; /* Daire boyutu */
+    height: 100px; /* Daire boyutu */
+    border: 15px solid #fe8366; /* Dış çerçeve #fe8366 */
+    border-radius: 50%; /* Yuvarlak şekil */
+    background-color: transparent; /* İç kısmı boş bırak */
+}
+
+/* Simit 1: Sağ yön hareketi */
+.simit1 {
+    top: 10%;
+    left: 5%;
+    animation: moveSimit1 10s linear infinite; /* Farklı animasyon */
+}
+
+/* Simit 2: Aşağı yön hareketi */
+.simit2 {
+    top: 40%;
+    left: 40%;
+    animation: moveSimit2 8s linear infinite; /* Farklı animasyon */
+}
+
+/* Simit 3: Yukarı yön hareketi */
+.simit3 {
+    top: 70%;
+    left: 70%;
+    animation: moveSimit3 12s linear infinite; /* Farklı animasyon */
+}
+
+/* Animasyon 1: Sağ yön hareketi */
+@keyframes moveSimit1 {
+    0% {
+        transform: translateX(0) translateY(0); /* Başlangıçta konumda */
+    }
+    50% {
+        transform: translateX(300px) translateY(0); /* Sağ hareket */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Geri eski konumuna */
+    }
+}
+
+/* Animasyon 2: Aşağı yön hareketi */
+@keyframes moveSimit2 {
+    0% {
+        transform: translateX(0) translateY(0); /* Başlangıçta konumda */
+    }
+    50% {
+        transform: translateX(0) translateY(300px); /* Aşağı hareket */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Geri eski konumuna */
+    }
+}
+
+/* Animasyon 3: Yukarı yön hareketi */
+@keyframes moveSimit3 {
+    0% {
+        transform: translateX(0) translateY(0); /* Başlangıçta konumda */
+    }
+    50% {
+        transform: translateX(0) translateY(-300px); /* Yukarı hareket */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Geri eski konumuna */
+    }
+}

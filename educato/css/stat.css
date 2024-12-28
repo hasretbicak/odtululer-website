@@ -1,0 +1,315 @@
+/* Stat Style  */
+.stat {
+    background: url(../img/turuncu-arka-plan.png) no-repeat center center ; 
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 80vh;
+}
+
+.stat-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+}
+.mascot-top {
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; 
+    display: block;
+}
+
+.maskot-image-top { 
+    transform: translateY(10%);
+    width: 800px !important;
+    height: auto;
+}
+
+
+.stat-icon {
+    width: 400px !important;
+    height: 250px;
+    background-color: #0C1C2D;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.dark-stat-icon {
+    width: 400px !important;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.dark-stat-icon:hover .dark-icon-container i {
+    color: #0C1C2D;
+}
+
+.dark-stat-icon:hover .dark-stat-title,
+.dark-stat-icon:hover .dark-stat-description {
+    color: #fff;
+}
+
+.stat-icon:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.dark-stat-icon:hover {
+    box-shadow: 0 12px 24px rgba(255, 255, 255);
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0C1C2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-icon-container i {
+    color: #fff;
+    font-size: 36px;
+}
+
+.icon-container i {
+    color: #0C1C2D;
+    font-size: 36px;
+}
+
+.stat-icon:hover .icon-container {
+    transform: scale(1.2);
+    background-color: #fff;
+}
+.dark-stat-icon:hover .dark-icon-container {
+    transform: scale(1.2);
+    background-color: #fff; 
+}
+.stat-icon:hover .icon-container i {
+    color: #0C1C2D;
+}
+
+.stat-icon:hover h3 {
+    color: #fff;
+}
+
+.stat-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.dark-stat-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #0C1C2D;
+    margin: 10px 0;
+}
+
+
+.stat-description {
+    font-size: 24px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.dark-stat-description {
+    font-size: 24px;
+    font-weight: normal;
+    color: #0C1C2D;
+}
+
+.stat-title,
+.stat-description {
+    position: relative;
+    z-index: 1;
+}
+.dark-stat-title,
+.dark-stat-description {
+    position: relative;
+    z-index: 1;
+}
+
+
+.stat-icon::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #fff, #F7C25A);
+    z-index: 0;
+    transition: top 0.5s ease-out;
+}
+
+.dark-stat-icon::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #F39200, #F7C25A);
+    z-index: 0;
+    transition: top 0.5s ease-out;
+}
+
+.dark-stat-icon:hover::before {
+    top: 0;
+}
+
+.stat-icon:hover::before {
+    top: 0;
+}
+
+.card-container:hover .stat-icon {
+    animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+/* Responsive  */
+@media (max-width: 1200px) {
+    .stat-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .stat{
+        min-height: 90vh;
+    }
+    .maskot-image-top {
+        display: none;
+    }
+
+    .stat-icon, .dark-stat-icon {
+        width: 90%;
+        max-width: 600px;
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .stat-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .stat{
+        min-height: 90vh;
+    }
+    .maskot-image-top {
+        display: none;
+    }
+
+    .stat-icon, .dark-stat-icon {
+        width: 90%;
+        max-width: 600px;
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stat-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .stat{
+        background: none;
+    }
+    .maskot-image-top {
+        display: none;
+    }
+
+    .stat-icon, .dark-stat-icon {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 15px;
+    }
+
+    .stat-title, .stat-description, .dark-stat-title, .dark-stat-description {
+        font-size: 24px;
+    }
+
+    .icon-container, .dark-icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .icon-container i, .dark-icon-container i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat{
+        background: none;
+    }
+    .maskot-image-top {
+        display: none;
+    }
+
+    .stat-icon, .dark-stat-icon {
+        width: 90%;
+        max-width: 400px;
+        margin-top: 15px;
+    }
+
+
+    .stat-title, .stat-description, .dark-stat-title, .dark-stat-description {
+        font-size: 20px;
+    }
+
+    .icon-container, .dark-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-container i, .dark-icon-container i {
+        font-size: 28px;
+    }
+}

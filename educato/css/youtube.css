@@ -1,0 +1,29 @@
+.video-background {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 90vh; 
+    overflow: hidden; 
+}
+
+
+.video-iframe {
+    position: absolute;
+    top: -120px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% + 240px); 
+}
+@media (max-width: 768px) {
+    .video-background {
+        margin-top: 90px;  
+        height: 30vh;  
+    }
+}
+@media (max-width: 1200px) {
+    .video-background {
+        margin-top: 100px;  
+        height: 35vh;  
+    }
+}
+

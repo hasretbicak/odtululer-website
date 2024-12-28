@@ -1,0 +1,147 @@
+  
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    height: 300px;
+    position: relative;
+}
+
+.card-gif {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.card-header {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    font-size: 14px;
+    color: #555;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3e5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #142f4d;
+    font-weight: bold;
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+}
+
+.card:hover .card-content {
+    top: 0;
+}
+
+.card-header {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #142f4d;
+}
+
+.card-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3e5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #142f4d;
+    font-weight: bold;
+    text-align: center;
+    transition: top 0.3s ease-in-out;
+}
+
+.card:hover .card-content {
+    top: 0;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 1024px) {
+  .scroll-section {
+        display: none; 
+    }
+    .card {
+        width: 45%;
+        height: 250px; 
+    }
+}
+
+@media (max-width: 768px) {
+  .scroll-section {
+        display: none; 
+    }
+    .card {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .card-gif {
+        width: 200px; 
+        height: 200px;
+    }
+
+    .card-header {
+        font-size: 18px; 
+    }
+
+    .card-content {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+  .scroll-section {
+        display: none; 
+    }
+    .card {
+        width: 100%; 
+        height: auto;
+        padding: 10px; 
+    }
+
+    .card-gif {
+        width: 180px; 
+        height: 180px;
+    }
+
+    .card-header {
+        font-size: 16px; 
+    }
+
+    .card-content {
+        font-size: 10px; 
+    }
+}

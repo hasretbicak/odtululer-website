@@ -1,0 +1,277 @@
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #fe8366;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    color: #fe8366;
+}
+
+.button-group button:hover {
+    background-color: #fe8366;
+    color: #fff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+
+.grid-item img {
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+}
+
+
+.grid-item img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 500px;
+}
+
+.next {
+    right: 500px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+#work {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.move-left,
+.move-right {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+
+.move-left {
+    top: 500px;
+    left: 0;
+    animation: moveLeftToRight 3s infinite alternate ease-in-out;
+}
+
+.move-right {
+    top: 200px;
+    right: 300px;
+    animation: moveRightToLeft 3s infinite alternate ease-in-out;
+}
+
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+.fix-maskot {
+    position: fixed;
+    left: -21%;
+    top: 50%;
+    transform: translateY(-50%) rotate(40deg);
+    z-index: 9999;
+}
+
+.fix-maskot .maskot-gallery {
+    width: 900px;
+    height: auto;
+}
+
+
+.box-courses.card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-courses.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+video,
+iframe {
+    width: 100%;
+    height: 270px;
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+ 
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+
+    .fix-maskot {
+        display: none; 
+    }
+    .filter-button-group button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .move-left,
+    .move-right {
+        width: 120px;
+    }
+
+    .box-courses.card {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-button-group button {
+        margin: 10px 0;
+    }
+
+
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+    }
+
+
+    .fix-maskot {
+        display: none;
+    }
+
+    .prev,
+    .next {
+        font-size: 24px;
+        padding: 10px;
+        left: 20px;
+        right: 20px;
+    }
+
+    .move-left,
+    .move-right {
+        width: 100px;
+        height: 100px;
+        top: 200px;
+    }
+}

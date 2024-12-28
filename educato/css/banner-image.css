@@ -1,0 +1,75 @@
+/*Banner image - Profesyonel Rehberlik- Etüt Sistemleri - Motivasyon*/
+#banner {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+#banner .container {
+    max-width: 90%;
+    padding: 0 15px;
+}
+
+#banner .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#banner .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .photo {
+    margin-bottom: 30px;
+   
+}
+
+#banner img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 1200px) {
+    .col {
+        flex: 0 0 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col {
+        flex: 0 0 50%;
+    }
+
+    .background-simits {
+        padding: 0 10px;
+    }
+
+    .simit {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 0 0 100%;
+    }
+
+    .background-simits {
+        display: none;
+    }
+
+    .photo {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .photo img {
+        max-height: 200px;
+    }
+}

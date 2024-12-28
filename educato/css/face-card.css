@@ -1,0 +1,171 @@
+/* Face-card Styles */
+.face-container{
+    width: 100%;
+    max-width: 1000px; 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto; 
+}
+
+.face-container .face-card{
+    position: relative;
+    cursor: pointer;
+    width: calc(33.333% - 20px); 
+}
+
+.face-container .face-card .face{
+    width: 100%;
+    height: 220px; 
+    transition: 0.5s;
+}
+
+.face-container .face-card .face.face1{
+    position: relative;
+    background: #0C1C2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(120px);
+}
+
+.face-container .face-card:hover .face.face1{
+    background: #b71c1c;
+    transform: translateY(0);
+}
+
+.face-container .face-card .face.face1 .face-content{
+    opacity: 0.7;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.face-container .face-card:hover .face.face1 .face-content{
+    opacity: 1;
+    text-align: center;
+}
+
+.face-container .face-card .face.face1 .face-content img{
+    fill: white;
+    width: 80px; 
+    height: 80px;
+} 
+
+.face-container .face-card .face.face1 .face-content h3{
+    margin: 10px 0 0;
+    z-index: 1;
+    padding: 0;
+    color: #ffffff !important;
+    text-shadow: none; 
+    text-align: center;
+    font-size: 1.5em; 
+}
+
+.face-container .face-card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.face-container .face-card:hover .face.face2{ 
+    transform: translateY(0);
+}
+
+.face-container .face-card .face.face2 .face-content p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.face-container .face-card .face.face2 .face-content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #fff;
+    padding: 10px; 
+    border: 1px solid #333;
+}
+
+.face-container .face-card .face.face2 .face-content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+/* Responsive Style*/
+@media (max-width: 1200px) {
+    .face-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .face-container .face-card{
+        width: calc(50% - 20px); 
+        margin-right: 20px;
+    }
+
+
+    .face-container .face-card .face{
+        height: 220px; 
+    }
+
+    .face-container .face-card .face.face1 .face-content h3{
+        font-size: 1.6em; 
+    }
+
+    .face-container .face-card .face.face2 .face-content a{
+        padding: 12px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .face-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .face-container .face-card{
+        width: 100%; 
+        margin-right: 0;
+    }
+
+    .face-container .face-card .face{
+        height: 220px; 
+    }
+
+    .face-container .face-card .face.face1 .face-content h3{
+        font-size: 1.6em; 
+    }
+
+    .face-container .face-card .face.face2 .face-content a{
+        padding: 12px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .face-container .face-card{
+        width: 100%; 
+        margin-right: 0;
+    }
+
+    .face-container .face-card .face{
+        height: 220px; 
+    }
+
+    .face-container .face-card .face.face1 .face-content h3{
+        font-size: 1.5em; 
+    }
+
+    .face-container .face-card .face.face2 .face-content a{
+        padding: 15px; 
+    }
+}
